@@ -1,1 +1,1 @@
-const { exec } = require("child_process");\nexec("docker logs $(docker ps -ql)", (err, stdout, stderr) => {\n if (err) {\n   console.error(`exec error: ${err}`);\n   return;\n }\n console.log(`stdout: ${stdout}`);\n console.error(`stderr: ${stderr}`);\n});
+const { exec } = require(child_process);\nexec("docker logs $(docker ps -ql)", (err, stdout, stderr) => {\n if (err) {\n console.error(`exec error: ${err}`);\n return;\n }\n console.log(`stdout: ${stdout}`);\n console.error(`stderr: ${stderr}`);\n});

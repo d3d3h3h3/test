@@ -1,1 +1,1 @@
-{\n  "scripts": {\n    "start": "node server.js",\n    "diagnose": "node diagnose.js"\n  }\n}
+{\n "scripts": {\n "start": "node server.js",\n "diagnose": "node diagnose.js"\n }\n}
