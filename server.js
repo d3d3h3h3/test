@@ -1,5 +1,1 @@
-const express = require("express");
-const app = express();
-const PORT = process.env.PORT || 3000;
-app.get("/", (req, res) => res.send("Hello Climate Action Tracker"));
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+const express = require("express");\nconst app = express();\nconst bodyParser = require("body-parser");\napp.use(bodyParser.urlencoded({ extended: true }));\napp.use(bodyParser.json());\nlet responses = [];\n// Endpoint to handle form submissions\napp.post("/api/submit", (req, res) => {\n    responses.push(req.body);\n    res.status(200).send("Response received");\n});\n// Endpoint to fetch dashboard data\napp.get("/api/dashboard", (req, res) => {\n    res.status(200).json({\n        message: "This is your dashboard data",\n        responses\n    });\n});\nconst PORT = process.env.PORT || 3000;\napp.listen(PORT, () => {\n    console.log(`Server is running on port ${PORT}`);\n});
