@@ -1,1 +1,1 @@
-{\n "scripts": {\n "start": "node server.js",\n "diagnose": "node diagnose.js"\n }\n}
+{"name": "climate-action-tracker", "version": "1.0.0", "description": "A tool for assessing and tracking individual climate change actions", "main": "server.js", "scripts": {"start": "node server.js", "diagnose": "node diagnose.js"}, "dependencies": {"express": "^4.17.1", "body-parser": "^1.19.0"}}
